@@ -1,0 +1,498 @@
+/* Developer: Brady Mills 
+        	  Updated Last Date: 5/5/2025
+            Course: CMSCI 256 
+            Assignment: Final Project - Mrs. Mills' Music Melodies */
+
+/* Body & Base Styles */
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f9f9f9;
+  background-image: radial-gradient(circle at 10% 20%, 
+                    rgba(232, 218, 255, 0.2) 0%, 
+                    rgba(255, 255, 255, 0) 30%);
+}
+
+/* Header & Navigation */
+header {
+  text-align: center;
+  padding: 20px;
+  background-color: #e6e6fa;
+}
+
+h1, h2, h3 {
+  color: #2c3e50;
+  margin-top: 0;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #2c3e50;
+  font-weight: bold;
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #d8bfd8;
+}
+
+nav a.active {
+  background-color: #9370db;
+  color: white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background-color: #ddd;
+  margin: 20px 0;
+}
+
+/* Content Containers */
+.content-container, 
+.home-content-right {
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.content-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 20px auto 0 auto;
+  padding: 25px;
+}
+
+.home-content-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start; 
+  align-items: flex-start;
+  gap: 10px;
+  max-width: 1200px;
+  margin: 0 auto 30px auto;
+  padding: 30px 30px 30px 0;
+}
+
+.home-content-right {
+  flex: 1;
+  min-width: 300px;
+  max-width: calc(100% - 320px);
+  padding: 20px;
+  margin-top: 40px;
+}
+
+/* Lists */
+.content-container ol,
+.content-container ul {
+  text-align: left;
+  padding-left: 20px;
+}
+
+.content-container ol {
+  display: inline-block;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.content-container li {
+  margin-bottom: 8px;
+}
+
+/* Resource Cards (Videos & PDFs) */
+.resources-grid,
+.pdf-resources {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.resource-container,
+.pdf-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-items: stretch;
+}
+
+.resource-card,
+.pdf-card {
+  flex: 1;
+  min-width: 400px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.resource-description,
+.pdf-description {
+  flex: 1;
+  min-width: 300px;
+  max-width: 400px;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 12px;
+  border-left: 4px solid #9370db;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.resource-description p,
+.pdf-description p {
+  margin: 0;
+  line-height: 1.6;
+  color: #333;
+  flex-grow: 1;
+}
+
+/* Media Elements */
+.resource-card iframe,
+.pdf-frame {
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  flex-grow: 1;
+}
+
+.resource-card iframe {
+  height: 400px;
+}
+
+.pdf-frame {
+  height: 700px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin: 15px 0;
+}
+
+.image-frame {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  margin: 0 auto;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.image-frame img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Website Links */
+.website-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin: 25px 0;
+}
+
+.website-links a {
+  display: inline-block;
+  padding: 12px 20px;
+  background-color: #9370db;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  border: 2px solid transparent;
+}
+
+.website-links a:hover {
+  background-color: #7b5cb3;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  border-color: #5a3e85;
+}
+
+.website-links a:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 3px rgba(0,0,0,0.1);
+}
+
+/* Image Circle */
+.image-circle {
+  width: 450px;
+  height: 450px;
+  border-radius: 50%;
+  background-image: url('images/mills_image.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: #f0e6ff;
+  border: 3px solid #9370db;
+  margin: 20px 20px 20px 0;
+  overflow: hidden;
+  position: relative;
+  left: -45px;
+  bottom: -15px;
+}
+
+/* Music Advocacy */
+.music-advocacy-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  overflow-x: auto;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead {
+  background-color: #9370db;
+  color: white;
+}
+
+th, td {
+  padding: 16px;
+  text-align: left;
+  vertical-align: top;
+  border-bottom: 1px solid #ddd;
+}
+
+tr:hover {
+  background-color: #f0f0ff;
+}
+
+th {
+  font-size: 1.1em;
+}
+
+td:first-child {
+  font-weight: bold;
+  color: #5a3e85;
+  width: 80px;
+}
+
+/* Misc Elements */
+.caption {
+  font-family: Arial, Helvetica, sans-serif; 
+  color: #6a3faa; 
+  text-align: center;
+  font-size:small; 
+  font-style: italic; 
+  margin: 0px 15px;
+}
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: rgb(156, 125, 226);
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 18px;
+}
+
+#myBtn:hover {
+  background-color: #555;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #e6e6fa;
+  color: #2c3e50;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 900px) {
+  .resource-container,
+  .pdf-container {
+    flex-direction: column;
+  }
+  
+  .resource-card,
+  .resource-description,
+  .pdf-card,
+  .pdf-description {
+    min-width: 100%;
+    max-width: 100%;
+  }
+  
+  .resource-card iframe {
+    height: 350px;
+  }
+  
+  .pdf-frame {
+    height: 500px;
+  }
+  
+  .home-content-right {
+    max-width: 100%;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .website-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .website-links a {
+    width: 80%;
+    text-align: center;
+  }
+  
+  .resource-card iframe {
+    height: 250px;
+  }
+  
+  .pdf-frame {
+    height: 400px;
+  }
+  
+  .image-circle {
+    width: 300px;
+    height: 300px;
+    left: 0;
+    margin: 20px auto;
+  }
+}
+
+/* Mobile CSS */
+/* Mobile Perfection - Fully Consistent Containers */
+@media only screen and (max-width: 767px) {
+  /* ===== CONSISTENT CONTAINER SYSTEM ===== */
+  .content-container,
+  .home-content-container,
+  .home-content-right,
+  .resources-grid,
+  .pdf-resources,
+  .resource-container,
+  .pdf-container,
+  .resource-description,
+  .pdf-description {
+    width: calc(100vw - 24px) !important;
+    max-width: 100% !important;
+    margin: 12px auto !important;
+    padding: 15px !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+    background-color: rgba(255, 255, 255, 0.85) !important;
+    border-radius: 12px !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08) !important;
+  }
+
+  /* ===== HOME CONTENT SPECIAL ADJUSTMENTS ===== */
+  .home-content-container {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    padding: 15px !important; /* Override any nested padding */
+  }
+
+  .home-content-right {
+    text-align: left; /* Maintain readability */
+    margin-top: 15px !important;
+  }
+
+  /* ===== PRESERVED NAVIGATION ===== */
+  nav ul {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    padding: 0 10px;
+    margin: 15px 0;
+  }
+
+  /* ===== PERFECT MEDIA CONTAINMENT ===== */
+  .resource-card iframe {
+    width: calc(100% - 4px) !important;
+    height: calc((100vw - 44px) * 0.5625) !important;
+    min-height: 180px;
+    max-height: 50vh;
+    margin: 2px !important;
+  }
+
+  .image-circle {
+    width: 65vw !important;
+    height: 65vw !important;
+    max-width: 220px !important;
+    max-height: 220px !important;
+    margin: 0 auto 20px !important;
+  }
+}
+
+/* Extra Small Screens */
+@media (max-width: 480px) {
+  .content-container,
+  .home-content-container,
+  .home-content-right {
+    width: calc(100vw - 20px) !important;
+    padding: 12px !important;
+    margin: 10px auto !important;
+  }
+  
+  nav ul {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Medium Screen Optimization (768px - 1024px) */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  /* ===== CENTERED IMAGE CIRCLE ===== */
+  .image-circle {
+    display: block !important;
+    margin: 0 auto 25px !important;
+    left: 0 !important;
+    right: 0 !important;
+    position: relative !important;
+    float: none !important;
+  }
+
+  /* ===== CONTAINER ALIGNMENT ===== */
+  .home-content-container {
+    justify-content: center !important;
+    align-items: center !important;
+  }
+
+  /* ===== OPTIONAL SIZE ADJUSTMENT ===== */
+  .image-circle {
+    width: 50vw !important;
+    height: 50vw !important;
+    max-width: 350px !important;
+    max-height: 350px !important;
+  }
+}
