@@ -12,9 +12,6 @@ html, body {
   line-height: 1.6;
   color: #333;
   background-color: #f9f9f9;
-  background-image: radial-gradient(circle at 10% 20%, 
-                    rgba(232, 218, 255, 0.2) 0%, 
-                    rgba(255, 255, 255, 0) 30%);
 }
 
 /* Header & Navigation */
@@ -24,11 +21,13 @@ header {
   background-color: #e6e6fa;
 }
 
+/* Header Text */
 h1, h2, h3 {
   color: #2c3e50;
   margin-top: 0;
 }
 
+/* Navigation */
 nav ul {
   list-style-type: none;
   padding: 0;
@@ -58,6 +57,7 @@ nav a.active {
   box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
+/* Line Break */
 hr {
   border: 0;
   height: 1px;
@@ -236,7 +236,7 @@ hr {
   box-shadow: 0 2px 3px rgba(0,0,0,0.1);
 }
 
-/* Image Circle */
+/* Image Circle (Profile) */
 .image-circle {
   width: 450px;
   height: 450px;
@@ -254,7 +254,7 @@ hr {
   bottom: -15px;
 }
 
-/* Music Advocacy */
+/* Music Advocacy - Table*/
 .music-advocacy-container {
   max-width: 1100px;
   margin: 0 auto;
@@ -297,6 +297,8 @@ td:first-child {
 }
 
 /* Misc Elements */
+
+/* Used for source information */
 .caption {
   font-family: Arial, Helvetica, sans-serif; 
   color: #6a3faa; 
@@ -306,6 +308,7 @@ td:first-child {
   margin: 0px 15px;
 }
 
+/* Used for the "Back to Top" button */
 #myBtn {
   display: none;
   position: fixed;
@@ -326,6 +329,7 @@ td:first-child {
   background-color: #555;
 }
 
+/* Footer */
 footer {
   text-align: center;
   padding: 20px;
@@ -391,9 +395,9 @@ footer {
 }
 
 /* Mobile CSS */
-/* Mobile Perfection - Fully Consistent Containers */
+
+/* Consistent Containers on mobile */
 @media only screen and (max-width: 767px) {
-  /* ===== CONSISTENT CONTAINER SYSTEM ===== */
   .content-container,
   .home-content-container,
   .home-content-right,
@@ -414,7 +418,7 @@ footer {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08) !important;
   }
 
-  /* ===== HOME CONTENT SPECIAL ADJUSTMENTS ===== */
+  /* Home Content on mobile */
   .home-content-container {
     display: flex !important;
     flex-direction: column !important;
@@ -428,7 +432,7 @@ footer {
     margin-top: 15px !important;
   }
 
-  /* ===== PRESERVED NAVIGATION ===== */
+  /* Navigation on mobile */
   nav ul {
     display: grid !important;
     grid-template-columns: repeat(2, 1fr);
@@ -437,7 +441,7 @@ footer {
     margin: 15px 0;
   }
 
-  /* ===== PERFECT MEDIA CONTAINMENT ===== */
+  /* Media containment on mobile */
   .resource-card iframe {
     width: calc(100% - 4px) !important;
     height: calc((100vw - 44px) * 0.5625) !important;
@@ -472,7 +476,7 @@ footer {
 
 /* Medium Screen Optimization (768px - 1024px) */
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
-  /* ===== CENTERED IMAGE CIRCLE ===== */
+  /* Centered image */
   .image-circle {
     display: block !important;
     margin: 0 auto 25px !important;
@@ -482,17 +486,9 @@ footer {
     float: none !important;
   }
 
-  /* ===== CONTAINER ALIGNMENT ===== */
+  /* Container alignment */
   .home-content-container {
     justify-content: center !important;
     align-items: center !important;
-  }
-
-  /* ===== OPTIONAL SIZE ADJUSTMENT ===== */
-  .image-circle {
-    width: 50vw !important;
-    height: 50vw !important;
-    max-width: 350px !important;
-    max-height: 350px !important;
   }
 }
