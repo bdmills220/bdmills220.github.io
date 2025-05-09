@@ -1,11 +1,11 @@
 /* Developer: Brady Mills 
-        	  Updated Last Date: 5/5/2025
+        	  Updated Last Date: 5/9/2025
             Course: CMSCI 256 
             Assignment: Final Project - Mrs. Mills' Music Melodies */
 
 
 /* Button to Top of Page
-    Resource W3Schools */
+    Resource - W3Schools */
     
 // Get the button:
 let mybutton = document.getElementById("myBtn");
